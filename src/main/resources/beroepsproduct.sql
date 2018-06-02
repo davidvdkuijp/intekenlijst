@@ -6,40 +6,51 @@ CREATE TABLE STUDENT
 NAAM VARCHAR(50) NOT NULL,
 VOORNAAM VARCHAR(50) NOT NULL,
 EMAIL VARCHAR(50) NOT NULL,
-STUDENTENNUMMER VARCHAR(15) NOT NULL UNIQUE);
+STUDENTENNUMMER VARCHAR(15) NOT NULL UNIQUE,
+ADRES VARCHAR(50) NOT NULL,
+CONTACTNUMMER VARCHAR(50) NOT NULL,
+GESLACHT CHAR NOT NULL,
+GEBOORTEDATUM DATE NOT NULL);
 
-INSERT INTO STUDENT (NAAM, VOORNAAM, EMAIL, STUDENTENNUMMER)
-VALUES ('Jhinkoe', 'Vinesh', 'vi.jhinkoe@unasat.sr', 'BI/1117/006'),
-       ('van der Kuijp', 'David', 'd.vanderkuijp@unasat.sr', 'SNE/1117/023'),
-       ('van `t Kruys', 'Mitchell', 'm.vantkruys@unasat.sr', 'SNE/1117/024'),
-       ('Tokromo', 'Riandie', 'r.tokromo@unasat.sr', 'BI/1117/011'),
-       ('Vigelandzoon', 'Andrew', 'a.vigelandzoon@unasat.sr', 'BI/1117/012'),
-       ('Yard', 'Chesron', 'c.yard@unasat.sr', 'SNE/1117/025');
+ALTER TABLE STUDENT
+ADD CONSTRAINT CHK_GESLACHT CHECK (GESLACHT IN ('M', 'V'));
+
+INSERT INTO STUDENT (NAAM, VOORNAAM, EMAIL, STUDENTENNUMMER, ADRES, CONTACTNUMMER, GESLACHT, GEBOORTEDATUM)
+VALUES ('Jhinkoe', 'Vinesh', 'vi.jhinkoe@unasat.sr', 'BI/1117/006', 'Aventendorlaan #399', '+597 8134679', 'M', '1964-09-02'),
+       ('van der Kuijp', 'David', 'd.vanderkuijp@unasat.sr', 'SNE/1117/023', 'Antondrachtenweg #9', '+597 8986314', 'M', '1989-12-12'),
+       ('van `t Kruys', 'Mitchell', 'm.vantkruys@unasat.sr', 'SNE/1117/024', 'Hornilaan #69', '+597 8676979', 'M', '1899-01-16'),
+       ('Tokromo', 'Riandie', 'r.tokromo@unasat.sr', 'BI/1117/011', 'Londonstraat #25', '+597 8154257', 'M', '1971-06-28'),
+       ('Vigelandzoon', 'Andrew', 'a.vigelandzoon@unasat.sr', 'BI/1117/012', 'Boesilaan #1', '+597 8024394', 'M', '1946-06-14'),
+       ('Yard', 'Chesron', 'c.yard@unasat.sr', 'SNE/1117/025', 'Metallicastraat #42', '+597 8134679', 'M', '1963-08-03');
 
 CREATE TABLE TENTAMEN
 (TENTAMEN_ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-TENTAMEN VARCHAR(50) NOT NULL,
+VAK VARCHAR(50) NOT NULL,
 OMSCHRIJVING TEXT NOT NULL,
 TENTAMENDATUM DATE NOT NULL,
 TENTAMENSTARTTIJD TIME NOT NULL,
-TENTAMENDUUR VARCHAR(50) NOT NULL);
+TENTAMENDUUR VARCHAR(50) NOT NULL,
+TENTAMENTYPE VARCHAR(50) NOT NULL);
 
-INSERT INTO TENTAMEN (TENTAMEN, OMSCHRIJVING, TENTAMENDATUM, TENTAMENSTARTTIJD, TENTAMENDUUR)
-VALUES ('Wisk', 'Wiskunde', '2019-01-23', '08:00', '2 uren'),
-       ('Nat', 'Natuurkunde', '2019-01-29', '09:00', '3 uren'),
-       ('W.T.O.', 'Werktuig Onderdelen', '2019-02-02', '08:00', '2 uren'),
-       ('E-leer', 'Electriciteitsleer', '2019-02-12', '10:00', '2 uren'),
-       ('God', 'Godsdienst', '2019-02-14', '08:00', '1 uur'),
-       ('Comp-Gam', 'Competetive Gaming', '2019-02-20', '20:00', '4 uren'),
-       ('Ja-Da', 'Java-Databases', '2019-02-23', '08:00', '2 uren');
+INSERT INTO TENTAMEN (VAK, OMSCHRIJVING, TENTAMENDATUM, TENTAMENSTARTTIJD, TENTAMENDUUR, TENTAMENTYPE)
+VALUES ('Wisk', 'Wiskunde', '2019-01-23', '08:00', '2 uren', 'Regulier tentamen'),
+       ('Nat', 'Natuurkunde', '2019-01-29', '09:00', '3 uren', 'Regulier tentamen'),
+       ('W.T.O.', 'Werktuig Onderdelen', '2019-02-02', '08:00', '2 uren', 'Hertentamen'),
+       ('E-leer', 'Electriciteitsleer', '2019-02-12', '10:00', '2 uren', 'Regulier tentamen'),
+       ('God', 'Godsdienst', '2019-02-14', '08:00', '1 uur', 'Hertentammen'),
+       ('Comp-Gam', 'Competetive Gaming', '2019-02-20', '20:00', '6 uren', 'Regulier tentamen'),
+       ('Ja-Da', 'Java-Databases', '2019-02-23', '08:00', '2 uren', 'Hertentamen'),
+		 ('Pokemon', 'Gotta catch them all', '2019-06-06', '16:20', '2 uren', 'Hertentamen');
 
 CREATE TABLE TENTAMENINTEKENLIJST
 (INTEKEN_ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-STUDENT_ID INT NOT NULL,
-CONSTRAINT FOREIGN KEY (STUDENT_ID) REFERENCES STUDENT(STUDENT_ID),
-TENTAMEN_ID INT NOT NULL,
-CONSTRAINT FOREIGN KEY (TENTAMEN_ID) REFERENCES TENTAMEN(TENTAMEN_ID),
-INGETEKEND VARCHAR(50) NOT NULL);
+STUDENT_NAAM INT NOT NULL,
+CONSTRAINT FOREIGN KEY (STUDENT_NAAM) REFERENCES STUDENT(STUDENT_ID),
+TENTAMEN_NAAM INT NOT NULL,
+CONSTRAINT FOREIGN KEY (TENTAMEN_NAAM) REFERENCES TENTAMEN(TENTAMEN_ID),
+INTEKEN_DATUM DATE NOT NULL,
+UITTEKEN_DATUM DATE NOT NULL,
+INGETEKEND CHAR NOT NULL );
 
-
-
+ALTER TABLE TENTAMENINTEKENLIJST
+ADD CONSTRAINT CHK_INGETEKEND CHECK (INGETEKEND IN ('J', 'N'));
