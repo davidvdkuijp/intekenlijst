@@ -1,4 +1,4 @@
 package sr.unasat.intekenlijst.entities;
 
-public class Docent {
+public class Tentamenintekenlijst {
 }
