@@ -26,7 +26,7 @@
     <loaded-nodes>
       <connection connection-id="4a81536b-aec5-4637-ae8a-bdebf3f47067">
         <schema name="mysql" object-types="table" />
-        <schema name="tentamen_intekenlijst" object-types="table" />
+        <schema name="tentamen_intekenlijst" object-types="function, table" />
       </connection>
     </loaded-nodes>
   </component>
