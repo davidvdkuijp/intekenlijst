@@ -1,6 +1,93 @@
 package sr.unasat.intekenlijst.entities;
 
+import java.sql.Time;
+import java.util.Date;
+
 public class Tentamen {
+    private int TENTAMENT_ID;
+    private String VAK;
+    private String OMSCHRIJVING;
+    private Date TENTAMENDATUM;
+    private Time TENTAMENSTARTTIJD;
+    private String TENTAMENDUUR;
+    private String TENTAMENTYPE;
 
+    public Tentamen(int TENTAMENT_ID, String VAK, String OMSCHRIJVING, Date TENTAMENDATUM, Time TENTAMENSTARTTIJD, String TENTAMENDUUR, String TENTAMENTYPE) {
+        this.TENTAMENT_ID = TENTAMENT_ID;
+        this.VAK = VAK;
+        this.OMSCHRIJVING = OMSCHRIJVING;
+        this.TENTAMENDATUM = TENTAMENDATUM;
+        this.TENTAMENSTARTTIJD = TENTAMENSTARTTIJD;
+        this.TENTAMENDUUR = TENTAMENDUUR;
+        this.TENTAMENTYPE = TENTAMENTYPE;
+    }
 
+    public int getTENTAMENT_ID() {
+        return TENTAMENT_ID;
+    }
+
+    public void setTENTAMENT_ID(int TENTAMENT_ID) {
+        this.TENTAMENT_ID = TENTAMENT_ID;
+    }
+
+    public String getVAK() {
+        return VAK;
+    }
+
+    public void setVAK(String VAK) {
+        this.VAK = VAK;
+    }
+
+    public String getOMSCHRIJVING() {
+        return OMSCHRIJVING;
+    }
+
+    public void setOMSCHRIJVING(String OMSCHRIJVING) {
+        this.OMSCHRIJVING = OMSCHRIJVING;
+    }
+
+    public Date getTENTAMENDATUM() {
+        return TENTAMENDATUM;
+    }
+
+    public void setTENTAMENDATUM(Date TENTAMENDATUM) {
+        this.TENTAMENDATUM = TENTAMENDATUM;
+    }
+
+    public Time getTENTAMENSTARTTIJD() {
+        return TENTAMENSTARTTIJD;
+    }
+
+    public void setTENTAMENSTARTTIJD(Time TENTAMENSTARTTIJD) {
+        this.TENTAMENSTARTTIJD = TENTAMENSTARTTIJD;
+    }
+
+    public String getTENTAMENDUUR() {
+        return TENTAMENDUUR;
+    }
+
+    public void setTENTAMENDUUR(String TENTAMENDUUR) {
+        this.TENTAMENDUUR = TENTAMENDUUR;
+    }
+
+    public String getTENTAMENTYPE() {
+        return TENTAMENTYPE;
+    }
+
+    public void setTENTAMENTYPE(String TENTAMENTYPE) {
+        this.TENTAMENTYPE = TENTAMENTYPE;
+    }
+
+    @Override
+    public String toString() {
+        return "Tentamen{" +
+                "TENTAMENT_ID=" + TENTAMENT_ID +
+                ", VAK='" + VAK + '\'' +
+                ", OMSCHRIJVING='" + OMSCHRIJVING + '\'' +
+                ", TENTAMENDATUM=" + TENTAMENDATUM +
+                ", TENTAMENSTARTTIJD=" + TENTAMENSTARTTIJD +
+                ", TENTAMENDUUR='" + TENTAMENDUUR + '\'' +
+                ", TENTAMENTYPE='" + TENTAMENTYPE + '\'' +
+                '}';
+    }
 }
