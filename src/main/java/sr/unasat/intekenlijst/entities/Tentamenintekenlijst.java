@@ -5,34 +5,34 @@ import org.omg.CORBA.PRIVATE_MEMBER;
 import java.util.Date;
 
 public class Tentamenintekenlijst {
-private int INTEKE_ID;
+private int INTEKEN_ID;
 private int STUDENTID;
 private String STUDENTNAAM;
 private String STUDENTVOORNAAM;
 private int TENTAMENID;
 private String TENTAMENNAAM;
 private Date INTEKEN_DATUM;
-private Date UITEKEN_DATUM;
+private Date UITTEKEN_DATUM;
 private String INGETEKEND;
 
-    public Tentamenintekenlijst(int INTEKE_ID, int STUDENTID, String STUDENTNAAM, String STUDENTVOORNAAM, int TENTAMENID, String TENTAMENNAAM, Date INTEKEN_DATUM, Date UITEKEN_DATUM, String INGETEKEND) {
-        this.INTEKE_ID = INTEKE_ID;
+    public Tentamenintekenlijst(int INTEKEN_ID, int STUDENTID, String STUDENTNAAM, String STUDENTVOORNAAM, int TENTAMENID, String TENTAMENNAAM, Date INTEKEN_DATUM, Date UITTEKEN_DATUM, String INGETEKEND) {
+        this.INTEKEN_ID = INTEKEN_ID;
         this.STUDENTID = STUDENTID;
         this.STUDENTNAAM = STUDENTNAAM;
         this.STUDENTVOORNAAM = STUDENTVOORNAAM;
         this.TENTAMENID = TENTAMENID;
         this.TENTAMENNAAM = TENTAMENNAAM;
         this.INTEKEN_DATUM = INTEKEN_DATUM;
-        this.UITEKEN_DATUM = UITEKEN_DATUM;
+        this.UITTEKEN_DATUM = UITTEKEN_DATUM;
         this.INGETEKEND = INGETEKEND;
     }
 
-    public int getINTEKE_ID() {
-        return INTEKE_ID;
+    public int getINTEKEN_ID() {
+        return INTEKEN_ID;
     }
 
-    public void setINTEKE_ID(int INTEKE_ID) {
-        this.INTEKE_ID = INTEKE_ID;
+    public void setINTEKEN_ID(int INTEKEN_ID) {
+        this.INTEKEN_ID = INTEKEN_ID;
     }
 
     public int getSTUDENTID() {
@@ -52,7 +52,7 @@ private String INGETEKEND;
     }
 
     public String getSTUDENTVOORNAAM() {
-        return STUDENTVOORNAAM;
+        return STUDENTVOTORNAAM;
     }
 
     public void setSTUDENTVOORNAAM(String STUDENTVOORNAAM) {
@@ -83,12 +83,12 @@ private String INGETEKEND;
         this.INTEKEN_DATUM = INTEKEN_DATUM;
     }
 
-    public Date getUITEKEN_DATUM() {
-        return UITEKEN_DATUM;
+    public Date getUITTEKEN_DATUM() {
+        return UITTEKEN_DATUM;
     }
 
-    public void setUITEKEN_DATUM(Date UITEKEN_DATUM) {
-        this.UITEKEN_DATUM = UITEKEN_DATUM;
+    public void setUITTEKEN_DATUM(Date UITTEKEN_DATUM) {
+        this.UITTEKEN_DATUM = UITTEKEN_DATUM;
     }
 
     public String getINGETEKEND() {
@@ -102,14 +102,14 @@ private String INGETEKEND;
     @Override
     public String toString() {
         return "Tentamenintekenlijst{" +
-                "INTEKE_ID=" + INTEKE_ID +
+                "INTEKE_ID=" + INTEKEN_ID +
                 ", STUDENTID=" + STUDENTID +
                 ", STUDENTNAAM='" + STUDENTNAAM + '\'' +
                 ", STUDENTVOORNAAM='" + STUDENTVOORNAAM + '\'' +
                 ", TENTAMENID=" + TENTAMENID +
                 ", TENTAMENNAAM='" + TENTAMENNAAM + '\'' +
                 ", INTEKEN_DATUM=" + INTEKEN_DATUM +
-                ", UITEKEN_DATUM=" + UITEKEN_DATUM +
+                ", UITEKEN_DATUM=" + UITTEKEN_DATUM +
                 ", INGETEKEND='" + INGETEKEND + '\'' +
                 '}';
     }
