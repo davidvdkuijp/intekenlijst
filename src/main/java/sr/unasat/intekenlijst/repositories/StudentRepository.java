@@ -15,7 +15,7 @@ public class StudentRepository {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("Het systeem werkt");
 
-            String URL = "jdbc:mysql://localhost/beroepsproduct";
+            String URL = "jdbc:mysql://localhost/tentamen_intekenlijst";
             String USER = "root";
             String PASS = "admin";
             connection = DriverManager.getConnection(URL, USER, PASS);

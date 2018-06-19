@@ -9,8 +9,5 @@
         <module name="lijst" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="lijst" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
