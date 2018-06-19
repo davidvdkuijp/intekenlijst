@@ -23,12 +23,7 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="4a81536b-aec5-4637-ae8a-bdebf3f47067">
-        <schema name="mysql" object-types="table" />
-        <schema name="tentamen_intekenlijst" object-types="column, function, table" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="4a81536b-aec5-4637-ae8a-bdebf3f47067">
@@ -42,6 +37,9 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/beroepsproduct.sql" connection-id="4a81536b-aec5-4637-ae8a-bdebf3f47067" session-id="MAIN" current-schema="tentamen_intekenlijst" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/beroepsproduct.sql" connection-id="41964050-3570-41c0-829a-a56026184bb4" session-id="MAIN" current-schema="tentamen_intekenlijst" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/beroepsproduct.sql" connection-id="4a81536b-aec5-4637-ae8a-bdebf3f47067" session-id="MAIN" current-schema="tentamen_intekenlijst" />
     <mapping file-url="file://$PROJECT_DIR$/src/main/resources/beroepsproduct.sql" connection-id="4a81536b-aec5-4637-ae8a-bdebf3f47067" session-id="MAIN" current-schema="tentamen_intekenlijst" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">

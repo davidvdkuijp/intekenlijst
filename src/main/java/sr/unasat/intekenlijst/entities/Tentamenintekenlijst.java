@@ -52,7 +52,7 @@ private String INGETEKEND;
     }
 
     public String getSTUDENTVOORNAAM() {
-        return STUDENTVOTORNAAM;
+        return STUDENTVOORNAAM;
     }
 
     public void setSTUDENTVOORNAAM(String STUDENTVOORNAAM) {

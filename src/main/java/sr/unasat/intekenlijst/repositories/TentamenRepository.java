@@ -9,7 +9,8 @@ import java.util.List;
 
 public class TentamenRepository {
     private Connection connection;
-    public TentamenRepository {
+    public TentamenRepository (){
+
         try {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("Het systeem werkt");
@@ -65,9 +66,9 @@ public class TentamenRepository {
         PreparedStatement stmt = null;
         int result = 0;
         try {
-            String sql = "insert into tentamen (NAAM) values(?)";
+            String sql = "insert into tentamen (VAK) values(?)";
             stmt = connection.prepareStatement(sql);
-            stmt.setString(1, tentamen.getNAAM());
+            stmt.setString(1, tentamen.getVAK());
             result = stmt.executeUpdate();
             System.out.println("resultset: " + result);
 
@@ -83,11 +84,11 @@ public class TentamenRepository {
         PreparedStatement stmt = null;
         int result = 0;
         try {
-            String sql = "DELETE FROM student WHERE student.STUDENTEN_ID = ?";
+            String sql = "DELETE FROM tentamen WHERE temtamen.TENTAMEN_ID = ?";
             stmt = connection.prepareStatement(sql);
-            stmt.setInt(1, student.getSTUDENT_ID());
+            stmt.setInt(1, tentamen.getTENTAMENT_ID());
             result = stmt.executeUpdate();
-            System.out.println("deleted: " + student.getSTUDENT_ID());
+            System.out.println("deleted: " + tentamen.getTENTAMENT_ID());
 
         } catch (SQLException e) {
 

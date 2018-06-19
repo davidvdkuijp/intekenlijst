@@ -71,13 +71,13 @@ public class TentamenIntekenLijstRepository {
         return tentamenintekenlijstList;
     }
 
-    public int insertOneRecord(Tentamenintekenlijst tentain) {
+    public int insertOneRecord(Tentamenintekenlijst tentamenintekenlijst) {
         PreparedStatement stmt = null;
         int result = 0;
         try {
-            String sql = "insert into tentain (NAAM) values(?)";
+            String sql = "insert into tentamentintekenlijst (INGETEKEND) values(?)";
             stmt = connection.prepareStatement(sql);
-            stmt.setString(1, tentain.getNAAM());
+            stmt.setString(1, tentamenintekenlijst.getINGETEKEND());
             result = stmt.executeUpdate();
             System.out.println("resultset: " + result);
 
@@ -89,15 +89,15 @@ public class TentamenIntekenLijstRepository {
         return result;
     }
 
-    public int deleteOneRecord(Student student){
+    public int deleteOneRecord(Tentamenintekenlijst tentamenintekenlijst){
         PreparedStatement stmt = null;
         int result = 0;
         try {
-            String sql = "DELETE FROM student WHERE student.STUDENTEN_ID = ?";
+            String sql = "DELETE FROM tentamenintekenlijst WHERE tentamenintekenlijst.INTEKEN_ID = ?";
             stmt = connection.prepareStatement(sql);
-            stmt.setInt(1, student.getSTUDENT_ID());
+            stmt.setInt(1, tentamenintekenlijst.getINTEKEN_ID());
             result = stmt.executeUpdate();
-            System.out.println("deleted: " + student.getSTUDENT_ID());
+            System.out.println("deleted: " + tentamenintekenlijst.getINTEKEN_ID());
 
         } catch (SQLException e) {
 
