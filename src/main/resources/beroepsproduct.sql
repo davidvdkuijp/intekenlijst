@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `student` (
 )
 COLLATE='utf8_general_ci'
 ENGINE=InnoDB
-AUTO_INCREMENT=19
+AUTO_INCREMENT=1
 ;
 
 INSERT INTO STUDENT (NAAM, VOORNAAM, EMAIL, STUDENTENNUMMER, ADRES, CONTACTNUMMER, GESLACHT, GEBOORTEDATUM)
@@ -80,7 +80,7 @@ VALUES ('Wisk', 'Wiskunde', '2019-01-23', '08:00', '2 uren', 'Regulier tentamen'
        ('God', 'Godsdienst', '2019-02-14', '08:00', '1 uur', 'Hertentammen'),
        ('Comp-Gam', 'Competetive Gaming', '2019-02-20', '20:00', '6 uren', 'Regulier tentamen'),
        ('Ja-Da', 'Java-Databases', '2019-02-23', '08:00', '2 uren', 'Hertentamen'),
-		 ('Pokemon', 'Gotta catch them all', '2019-06-06', '16:20', '2 uren', 'Hertentamen');
+	   ('Pokemon', 'Gotta catch them all', '2019-06-06', '16:20', '2 uren', 'Hertentamen');
 
 DROP TABLE IF EXISTS `tentamenintekenlijst`
 CREATE TABLE IF NOT EXISTS `tentamenintekenlijst` (

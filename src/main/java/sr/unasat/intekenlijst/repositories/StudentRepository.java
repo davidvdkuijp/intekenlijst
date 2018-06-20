@@ -89,7 +89,7 @@ public class StudentRepository {
         PreparedStatement stmt = null;
         int result = 0;
         try {
-            String sql = "DELETE FROM student WHERE student.STUDENTEN_ID = ?";
+            String sql = "DELETE FROM student WHERE student.STUDENT_ID = ?";
             stmt = connection.prepareStatement(sql);
             stmt.setInt(1, student.getSTUDENT_ID());
             result = stmt.executeUpdate();
