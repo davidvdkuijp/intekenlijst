@@ -1,6 +1,7 @@
 package sr.unasat.intekenlijst.entities;
 
-import java.util.Date;
+
+
 
 public class Student {
     private int STUDENT_ID;
@@ -11,9 +12,13 @@ public class Student {
     private String ADRES;
     private String CONTACTNUMMER;
     private String GESLACHT;
-    private Date GEBOORTEDATUM;
+    private String GEBOORTEDATUM;
 
-    public Student(int STUDENT_ID, String NAAM, String VOORNAAM, String EMAIL, String STUDENTENNUMMER, String ADRES, String CONTACTNUMMER, String GESLACHT, Date GEBOORTEDATUM) {
+    public Student(int STUDENT_ID) {
+        this.STUDENT_ID = STUDENT_ID;
+    }
+
+    public Student(int STUDENT_ID, String NAAM, String VOORNAAM, String EMAIL, String STUDENTENNUMMER, String ADRES, String CONTACTNUMMER, String GESLACHT, String GEBOORTEDATUM) {
         this.STUDENT_ID = STUDENT_ID;
         this.NAAM = NAAM;
         this.VOORNAAM = VOORNAAM;
@@ -24,6 +29,8 @@ public class Student {
         this.GESLACHT = GESLACHT;
         this.GEBOORTEDATUM = GEBOORTEDATUM;
     }
+
+
 
     public int getSTUDENT_ID() {
         return STUDENT_ID;
@@ -89,11 +96,11 @@ public class Student {
         this.GESLACHT = GESLACHT;
     }
 
-    public Date getGEBOORTEDATUM() {
+    public String getGEBOORTEDATUM() {
         return GEBOORTEDATUM;
     }
 
-    public void setGEBOORTEDATUM(Date GEBOORTEDATUM) {
+    public void setGEBOORTEDATUM(String GEBOORTEDATUM) {
         this.GEBOORTEDATUM = GEBOORTEDATUM;
     }
 

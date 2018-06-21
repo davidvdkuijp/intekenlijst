@@ -48,7 +48,7 @@ public class StudentRepository {
                 String ADRES = rs.getString("ADRES");
                 String CONTACTNUMMER = rs.getString("CONTACTNUMMER");
                 String GESLACHT = rs.getString("GESLACHT");
-                Date GEBOORTEDATUM = rs.getDate("GEBOORTEDATUM");
+                String GEBOORTEDATUM = rs.getString("GEBOORTEDATUM");
 
             /*    //Display values
                System.out.print("ID: " + id);

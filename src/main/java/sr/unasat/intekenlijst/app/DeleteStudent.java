@@ -1,5 +1,6 @@
 package sr.unasat.intekenlijst.app;
 
+import java.lang.String;
 import sr.unasat.intekenlijst.entities.Student;
 import sr.unasat.intekenlijst.repositories.StudentRepository;
 
@@ -13,11 +14,15 @@ public class DeleteStudent {
         StudentRepository studentRepo = new StudentRepository();
         List<Student> studentList = studentRepo.findAllRecords();
         for (Student student : studentList) {
-
-            Student student1 = new Student(1);
-            studentRepo.deleteOneRecord(student1);
-
+            System.out.println(student);
         }
 
+        Student student1 = new Student(1);
+        System.out.println(studentRepo.deleteOneRecord(student1));
+
+        studentList = studentRepo.findAllRecords();
+        for (Student student : studentList) {
+            System.out.println(student);
+        }
     }
 }

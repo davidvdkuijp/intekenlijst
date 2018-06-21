@@ -7,12 +7,12 @@ public class Tentamen {
     private int TENTAMENT_ID;
     private String VAK;
     private String OMSCHRIJVING;
-    private Date TENTAMENDATUM;
-    private Time TENTAMENSTARTTIJD;
+    private String TENTAMENDATUM;
+    private String TENTAMENSTARTTIJD;
     private String TENTAMENDUUR;
     private String TENTAMENTYPE;
 
-    public Tentamen(int TENTAMENT_ID, String VAK, String OMSCHRIJVING, Date TENTAMENDATUM, Time TENTAMENSTARTTIJD, String TENTAMENDUUR, String TENTAMENTYPE) {
+    public Tentamen(int TENTAMENT_ID, String VAK, String OMSCHRIJVING, String TENTAMENDATUM, String TENTAMENSTARTTIJD, String TENTAMENDUUR, String TENTAMENTYPE) {
         this.TENTAMENT_ID = TENTAMENT_ID;
         this.VAK = VAK;
         this.OMSCHRIJVING = OMSCHRIJVING;
@@ -46,19 +46,19 @@ public class Tentamen {
         this.OMSCHRIJVING = OMSCHRIJVING;
     }
 
-    public Date getTENTAMENDATUM() {
+    public String getTENTAMENDATUM() {
         return TENTAMENDATUM;
     }
 
-    public void setTENTAMENDATUM(Date TENTAMENDATUM) {
+    public void setTENTAMENDATUM(String TENTAMENDATUM) {
         this.TENTAMENDATUM = TENTAMENDATUM;
     }
 
-    public Time getTENTAMENSTARTTIJD() {
+    public String getTENTAMENSTARTTIJD() {
         return TENTAMENSTARTTIJD;
     }
 
-    public void setTENTAMENSTARTTIJD(Time TENTAMENSTARTTIJD) {
+    public void setTENTAMENSTARTTIJD(String TENTAMENSTARTTIJD) {
         this.TENTAMENSTARTTIJD = TENTAMENSTARTTIJD;
     }
 
