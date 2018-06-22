@@ -1,4 +1,5 @@
 /*
+
 package sr.unasat.intekenlijst.app;
 
 import sr.unasat.intekenlijst.entities.Tentamen;
@@ -19,14 +20,7 @@ public class InsertTentamen {
             System.out.println(tentamen);
         }
 
-        */
-/*PersoonRepository persoonRepo = new PersoonRepository();
-        List<Persoon> persoonList = persoonRepo.findAllRecords();
-        for (Persoon persoon : persoonList) {
-            System.out.println(persoon);*//*
-
-
-
     }
 }
+
 */
