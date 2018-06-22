@@ -42,6 +42,8 @@
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
     <mapping file-url="file://$PROJECT_DIR$/src/main/resources/beroepsproduct.sql" connection-id="2b62bfce-870a-473c-b0ae-edc2831bf85b" session-id="MAIN" current-schema="tentamen_intekenlijst" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/beroepsproduct.sql" connection-id="2b62bfce-870a-473c-b0ae-edc2831bf85b" session-id="MAIN" current-schema="tentamen_intekenlijst" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/beroepsproduct.sql" connection-id="4a81536b-aec5-4637-ae8a-bdebf3f47067" session-id="MAIN" current-schema="tentamen_intekenlijst" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />

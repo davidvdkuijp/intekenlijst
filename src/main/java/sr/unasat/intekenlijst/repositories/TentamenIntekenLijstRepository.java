@@ -107,15 +107,14 @@ public class TentamenIntekenLijstRepository {
         return result;
     }
 
-    public int updateOneRecord(TentamenIntekenLijstRepository tilRep) {
+    public int updateOneRecord(Tentamenintekenlijst tilRep) {
         PreparedStatement stmt = null;
         int result = 0;
         try {
-            String sql = "update tentamen_intekenlijst ti set ti.STUDENTNAAM = ?, ci.STUDENVOORNAAM = ? where ci.id = ?";
+            String sql = "update tentamenintekenlijst ti  set ti.STUDENTID = ?, ti.TENTAMENID = ? where ci.id = ?";
             stmt = connection.prepareStatement(sql);
-            stmt.setInt(1, tilRep.getSTUDENTNAAM());
-            stmt.setInt(2, tilRep.getVOORNAAM().getId());
-            stmt.setInt(3, tilRep.getId());
+            stmt.setInt(1, tilRep.getSTUDENTID());
+            stmt.setInt(2, tilRep.getTENTAMENID());
             result = stmt.executeUpdate();
             System.out.println("resultset: " + result);
 
@@ -126,4 +125,4 @@ public class TentamenIntekenLijstRepository {
         }
         return result;
 
-}
+}}

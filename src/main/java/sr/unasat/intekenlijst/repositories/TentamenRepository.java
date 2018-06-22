@@ -31,6 +31,7 @@ public class TentamenRepository {
     public List<Tentamen> findAllRecords() {
         List<Tentamen> tentamenList = new ArrayList<Tentamen>();
         Statement stmt = null;
+        ResultSet resultSet = null;
         try {
             stmt = connection.createStatement();
             String sql = "select * from Tentamen";
@@ -42,8 +43,8 @@ public class TentamenRepository {
                 int TENTAMEN_ID = rs.getInt("TENTAMEN_ID");
                 String VAK = rs.getString("VAK");
                 String OMSCHRIJVING = rs.getString("OMSCHRIJVING");
-                Date TENTAMENDATUM = rs.getDate("TENTAMENDATUM");
-                Time TENTAMENSTARTTIJD = rs.getTime("TENTAMENSTARTTIJD");
+                String TENTAMENDATUM = rs.getString("TENTAMENDATUM");
+                String TENTAMENSTARTTIJD = rs.getString("TENTAMENSTARTTIJD");
                 String TENTAMENDUUR = rs.getString("TENTAMENDUUR");
                 String TENTAMENTYPE = rs.getString("TENTAMENTYPE");
 
@@ -67,6 +68,7 @@ public class TentamenRepository {
         int result = 0;
         try {
             String sql = "insert into tentamen (VAK) values(?)";
+            //int pk = tentamenRepo.insertOneRecord(new Tentamen(48, "NW", "Netwerken", "2019-01-23", "08:00", "2 uren", "Regulier tentamen"));
             stmt = connection.prepareStatement(sql);
             stmt.setString(1, tentamen.getVAK());
             result = stmt.executeUpdate();

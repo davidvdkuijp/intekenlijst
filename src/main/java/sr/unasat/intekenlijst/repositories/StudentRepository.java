@@ -88,6 +88,7 @@ public class StudentRepository {
     public int deleteOneRecord(Student student){
         PreparedStatement stmt = null;
         int result = 0;
+
         try {
             String sql = "DELETE FROM student WHERE student.STUDENT_ID = ?";
             stmt = connection.prepareStatement(sql);
