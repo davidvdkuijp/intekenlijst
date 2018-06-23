@@ -50,11 +50,11 @@ public class StudentRepository {
                 String GESLACHT = rs.getString("GESLACHT");
                 String GEBOORTEDATUM = rs.getString("GEBOORTEDATUM");
 
-            /*    //Display values
-               System.out.print("ID: " + id);
-               System.out.print(", Age: " + naam);*/
+               //Display values
+               System.out.print("ID: " + STUDENT_ID);
+               System.out.print(", Age: " + NAAM + VOORNAAM);
                 studentList.add(new Student(STUDENT_ID, NAAM,VOORNAAM,EMAIL,STUDENTENNUMMER,ADRES,CONTACTNUMMER,GESLACHT,GEBOORTEDATUM));
-                //  persoonList.add(new Persoon(rs.getInt("id"), rs.getString("naam")));
+                //studentList.add(new Student(rs.getInt("id"), rs.getString("naam")));
             }
             rs.close();
 
@@ -90,13 +90,16 @@ public class StudentRepository {
         int result = 0;
 
         try {
-            String sql = "DELETE FROM student WHERE student.STUDENT_ID = ?";
-            stmt = connection.prepareStatement(sql);
+            stmt = connection.prepareStatement ("DELETE FROM student WHERE STUDENT_ID = ?");
+           // String sql = "DELETE FROM student WHERE student.STUDENT_ID = ?";
+            //stmt = connection.prepareStatement(sql);
             stmt.setInt(1, student.getSTUDENT_ID());
             result = stmt.executeUpdate();
-            System.out.println("deleted: " + student.getSTUDENT_ID());
+
 
         } catch (SQLException e) {
+            System.out.println("deleted Student ID: " + student.getSTUDENT_ID());
+           // e.printStackTrace();
 
         } finally {
 

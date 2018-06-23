@@ -9,7 +9,7 @@ import sr.unasat.intekenlijst.repositories.TentamenRepository;
 
 import java.util.List;
 
-public class Application{
+public class ReadAll {
 
     public static void main(String[] args) {
         StudentRepository StudentRepo = new StudentRepository();
@@ -58,7 +58,7 @@ public class Application{
 import sr.unasat.intekenlijst.entities.Student;
 import sr.unasat.intekenlijst.repositories.StudentRepository;
 
-public class Application {
+public class ReadAll {
 
     public static void main(String[] args) {
         StudentRepository studenRep = new StudentRepository();
