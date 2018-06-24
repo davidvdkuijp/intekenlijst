@@ -5,7 +5,6 @@ import sr.unasat.intekenlijst.entities.Tentamenintekenlijst;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
@@ -49,8 +48,8 @@ public class TentamenIntekenLijstRepository {
                 String STUDENTVOORNAAM = rs.getString("STUDENTVOORNAAM");
                 int TENTAMENID = rs.getInt("TENTAMENID");
                 String TENTAMENNAAM = rs.getString("TENTAMENNAAM");
-                Date INTEKEN_DATUM = rs.getDate("INTEKEN_DATUM");
-                Date UITEKEN_DATUM = rs.getDate("UITEKEN_DATUM");
+                String INTEKEN_DATUM = rs.getString("INTEKEN_DATUM");
+                String UITEKEN_DATUM = rs.getString("UITEKEN_DATUM");
                 String INGETEKEND = rs.getString("INGETEKEND");
            
                 

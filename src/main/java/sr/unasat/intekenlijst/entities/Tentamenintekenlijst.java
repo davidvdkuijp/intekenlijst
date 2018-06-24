@@ -2,7 +2,7 @@ package sr.unasat.intekenlijst.entities;
 
 import org.omg.CORBA.PRIVATE_MEMBER;
 
-import java.util.Date;
+
 
 public class Tentamenintekenlijst {
 private int INTEKEN_ID;
@@ -11,11 +11,11 @@ private String STUDENTNAAM;
 private String STUDENTVOORNAAM;
 private int TENTAMENID;
 private String TENTAMENNAAM;
-private Date INTEKEN_DATUM;
-private Date UITTEKEN_DATUM;
+private String INTEKEN_DATUM;
+private String UITTEKEN_DATUM;
 private String INGETEKEND;
 
-    public Tentamenintekenlijst(int INTEKEN_ID, int STUDENTID, String STUDENTNAAM, String STUDENTVOORNAAM, int TENTAMENID, String TENTAMENNAAM, Date INTEKEN_DATUM, Date UITTEKEN_DATUM, String INGETEKEND) {
+    public Tentamenintekenlijst(int INTEKEN_ID, int STUDENTID, String STUDENTNAAM, String STUDENTVOORNAAM, int TENTAMENID, String TENTAMENNAAM, String INTEKEN_DATUM, String UITTEKEN_DATUM, String INGETEKEND) {
         this.INTEKEN_ID = INTEKEN_ID;
         this.STUDENTID = STUDENTID;
         this.STUDENTNAAM = STUDENTNAAM;
@@ -80,19 +80,19 @@ private String INGETEKEND;
         this.TENTAMENNAAM = TENTAMENNAAM;
     }
 
-    public Date getINTEKEN_DATUM() {
+    public String getINTEKEN_DATUM() {
         return INTEKEN_DATUM;
     }
 
-    public void setINTEKEN_DATUM(Date INTEKEN_DATUM) {
+    public void setINTEKEN_DATUM(String INTEKEN_DATUM) {
         this.INTEKEN_DATUM = INTEKEN_DATUM;
     }
 
-    public Date getUITTEKEN_DATUM() {
+    public String getUITTEKEN_DATUM() {
         return UITTEKEN_DATUM;
     }
 
-    public void setUITTEKEN_DATUM(Date UITTEKEN_DATUM) {
+    public void setUITTEKEN_DATUM(String UITTEKEN_DATUM) {
         this.UITTEKEN_DATUM = UITTEKEN_DATUM;
     }
 
