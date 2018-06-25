@@ -1,3 +1,4 @@
+/*
 package sr.unasat.intekenlijst.app;
 
 import sr.unasat.intekenlijst.entities.Tentamenintekenlijst;
@@ -17,3 +18,4 @@ public class UpdateTentamenIntekenLijst {
 
     }
 }
+*/
