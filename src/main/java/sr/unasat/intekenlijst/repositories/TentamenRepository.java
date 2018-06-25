@@ -67,15 +67,20 @@ public class TentamenRepository {
         PreparedStatement stmt = null;
         int result = 0;
         try {
-            String sql = "insert into tentamen (VAK) values(?)";
-            //int pk = tentamenRepo.insertOneRecord(new Tentamen(48, "NW", "Netwerken", "2019-01-23", "08:00", "2 uren", "Regulier tentamen"));
+            String sql = "insert into tentamen (VAK, OMSCHRIJVING, TENTAMENDATUM, TENTAMENSTARTTIJD, TENTAMENDUUR, TENTAMENTYPE) values(?,?,?,?,?,?)";
             stmt = connection.prepareStatement(sql);
             stmt.setString(1, tentamen.getVAK());
+            stmt.setString(2, tentamen.getOMSCHRIJVING());
+            stmt.setString(3, tentamen.getTENTAMENDATUM() );
+            stmt.setString(4, tentamen.getTENTAMENSTARTTIJD());
+            stmt.setString(5,tentamen.getTENTAMENDUUR());
+            stmt.setString(6, tentamen.getTENTAMENTYPE() );
             result = stmt.executeUpdate();
             System.out.println("resultset: " + result);
 
-        } catch (SQLException e) {
-
+        } catch (Exception e)
+        {
+            System.out.println(e.getMessage());
         } finally {
 
         }

@@ -1,4 +1,3 @@
-/*
 
 package sr.unasat.intekenlijst.app;
 
@@ -12,15 +11,11 @@ public class InsertTentamen {
     public static void main(String[] args) {
 
         TentamenRepository tentamenRepo = new TentamenRepository();
-        List<Tentamen> tentamenList = tentamenRepo.insertOneRecord();
-        for (Tentamen tentamen : tentamenList) {
+        Tentamen t = new Tentamen(48, "NW", "Netwerken", "2019-01-23", "08:00", "2 uren", "Regulier tentamen");
+        tentamenRepo.insertOneRecord(t);
 
-            int pk = tentamenRepo.insertOneRecord(new Tentamen(48, "NW", "Netwerken", "2019-01-23", "08:00", "2 uren", "Regulier tentamen"));
 
-            System.out.println(tentamen);
-        }
 
     }
 }
 
-*/

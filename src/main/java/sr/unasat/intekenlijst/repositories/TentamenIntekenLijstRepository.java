@@ -1,6 +1,7 @@
 package sr.unasat.intekenlijst.repositories;
 
 
+import com.sun.org.apache.bcel.internal.generic.RETURN;
 import sr.unasat.intekenlijst.entities.Tentamenintekenlijst;
 
 import java.sql.*;
@@ -124,4 +125,45 @@ public class TentamenIntekenLijstRepository {
         }
         return result;
 
-}}
+}
+public List<Tentamenintekenlijst> SelectTentaInteken () {
+    List<Tentamenintekenlijst> tentamenintekenlijstList = new ArrayList<Tentamenintekenlijst>();
+    PreparedStatement stmt = null;
+    int result = 0;
+
+    try {
+        String sql = "Select * FROM TENTAMENINTEKENLIJST";
+        stmt = connection.prepareStatement(sql);
+        ResultSet rs = stmt.executeQuery(sql);
+        System.out.println("resultset: " + rs);
+
+        while ( rs.next() ) {
+            //Retrieve by column name
+            int INTEKEN_ID = rs.getInt("INTEKEN_ID");
+            int STUDENTID = rs.getInt("STUDENTID");
+            String STUDENTNAAM = rs.getString("STUDENTNAAM");
+            String STUDENTVOORNAAM = rs.getString("STUDENTVOORNAAM");
+            int TENTAMENID = rs.getInt("TENTAMENID");
+            String TENTAMENNAAM = rs.getString("TENTAMENNAAM");
+            String INTEKEN_DATUM = rs.getString("INTEKEN_DATUM");
+            String UITEKEN_DATUM = rs.getString("UITEKEN_DATUM");
+            String INGETEKEND = rs.getString("INGETEKEND");
+
+
+            tentamenintekenlijstList.add(new Tentamenintekenlijst(INTEKEN_ID, STUDENTID,STUDENTNAAM,STUDENTVOORNAAM,TENTAMENID,TENTAMENNAAM,INTEKEN_DATUM,UITEKEN_DATUM,INGETEKEND));
+
+        }
+        rs.close();
+    }
+    catch (SQLException e) {
+            }
+
+            finally {
+
+    }
+return  Tentamenintekenlijst;
+
+}
+
+
+}
