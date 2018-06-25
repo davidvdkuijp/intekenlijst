@@ -14,8 +14,6 @@ public class InsertTentamen {
         Tentamen t = new Tentamen(48, "NW", "Netwerken", "2019-01-23", "08:00", "2 uren", "Regulier tentamen");
         tentamenRepo.insertOneRecord(t);
 
-
-
     }
 }
 

@@ -161,7 +161,7 @@ public List<Tentamenintekenlijst> SelectTentaInteken () {
             finally {
 
     }
-return  Tentamenintekenlijst;
+return  tentamenintekenlijstList;
 
 }
 

@@ -33,37 +33,4 @@ public class ReadAll {
     }
 
 
-
-/*        Persoon person = new Persoon(4);
-        persoonRepo.deleteOneRecord(person);*/
-
-//        int pk = persoonRepo.insertOneRecord(new Persoon("Ellen"));
-
-//        ContactInformatieRepository ci = new ContactInformatieRepository();
-//        ContactInformatie recordFound = ci.findOneRecord(1234, "Manjastraat 10");
-//        System.out.println("single record: " + ci);
-//
-//        recordFound.setTelefoonNummer(8888);
-//        recordFound.getPersoon().setId(4);
-//        ci.updateOneRecord(recordFound);
-//
-//        System.out.println(ci.findAllRecords());
-
-
 }
-
-
-/* sr.unasat.intekenlijst.app;
-
-import sr.unasat.intekenlijst.entities.Student;
-import sr.unasat.intekenlijst.repositories.StudentRepository;
-
-public class ReadAll {
-
-    public static void main(String[] args) {
-        StudentRepository studenRep = new StudentRepository();
-        List<Student> studentLis
-    }
-}
-
-*/
