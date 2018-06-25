@@ -93,11 +93,11 @@ public class TentamenIntekenLijstRepository {
         PreparedStatement stmt = null;
         int result = 0;
         try {
-            String sql = "DELETE FROM tentamenintekenlijst WHERE tentamenintekenlijst.INTEKEN_ID = ?";
+            String sql = "DELETE STUDENTNAAM, STUDENTVOORNAAM, TENTAMENNAAM, INTEKEN_DATUM, INTEKEN_DATUM, UITEKENDATUM, INGETEKEND FROM tentamenintekenlijst WHERE tentamenintekenlijst.STUDENID = ?";
             stmt = connection.prepareStatement(sql);
-            stmt.setInt(1, tentamenintekenlijst.getINTEKEN_ID());
+            stmt.setInt(1, tentamenintekenlijst.getSTUDENTID());
             result = stmt.executeUpdate();
-            System.out.println("deleted: " + tentamenintekenlijst.getINTEKEN_ID());
+            System.out.println("deleted: " + tentamenintekenlijst.getSTUDENTID());
 
         } catch (SQLException e) {
 
@@ -107,7 +107,7 @@ public class TentamenIntekenLijstRepository {
         return result;
     }
 
-    public int updateOneRecord(Tentamenintekenlijst tilRep) {
+    public int updateRecord(Tentamenintekenlijst tilRep) {
         PreparedStatement stmt = null;
         int result = 0;
         try {
@@ -146,16 +146,18 @@ public List<Tentamenintekenlijst> SelectTentaInteken () {
             int TENTAMENID = rs.getInt("TENTAMENID");
             String TENTAMENNAAM = rs.getString("TENTAMENNAAM");
             String INTEKEN_DATUM = rs.getString("INTEKEN_DATUM");
-            String UITEKEN_DATUM = rs.getString("UITEKEN_DATUM");
+            String UITTEKEN_DATUM = rs.getString("UITTEKEN_DATUM");
             String INGETEKEND = rs.getString("INGETEKEND");
 
 
-            tentamenintekenlijstList.add(new Tentamenintekenlijst(INTEKEN_ID, STUDENTID,STUDENTNAAM,STUDENTVOORNAAM,TENTAMENID,TENTAMENNAAM,INTEKEN_DATUM,UITEKEN_DATUM,INGETEKEND));
+            tentamenintekenlijstList.add(new Tentamenintekenlijst(INTEKEN_ID, STUDENTID,STUDENTNAAM,STUDENTVOORNAAM,TENTAMENID,TENTAMENNAAM,INTEKEN_DATUM,UITTEKEN_DATUM,INGETEKEND));
 
         }
         rs.close();
     }
-    catch (SQLException e) {
+    catch (SQLException e)
+    {
+        System.out.println("");
             }
 
             finally {

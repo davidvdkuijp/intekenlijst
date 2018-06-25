@@ -1,9 +1,7 @@
 package sr.unasat.intekenlijst.app;
 
 import java.lang.String;
-import sr.unasat.intekenlijst.entities.Student;
 import sr.unasat.intekenlijst.entities.Tentamenintekenlijst;
-import sr.unasat.intekenlijst.repositories.StudentRepository;
 import sr.unasat.intekenlijst.repositories.TentamenIntekenLijstRepository;
 
 import java.util.List;
