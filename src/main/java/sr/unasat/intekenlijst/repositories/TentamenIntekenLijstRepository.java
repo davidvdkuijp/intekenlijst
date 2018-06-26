@@ -89,15 +89,25 @@ public class TentamenIntekenLijstRepository {
         return result;
     }
 
-    public int deleteOneRecord(Tentamenintekenlijst tentamenintekenlijst){
+    public int deleteRecord(Tentamenintekenlijst tentamenintekenlijst){
         PreparedStatement stmt = null;
         int result = 0;
         try {
-            String sql = "DELETE STUDENTNAAM, STUDENTVOORNAAM, TENTAMENNAAM, INTEKEN_DATUM, INTEKEN_DATUM, UITEKENDATUM, INGETEKEND FROM tentamenintekenlijst WHERE tentamenintekenlijst.STUDENID = ?";
+            String sql = "DELETE INTEKEN_ID, STUDENTID, STUDENTNAAM, STUDENTVOORNAAM, TENTAMENID, TENTAMENNAAM, INTEKEN_DATUM, UITEKENDATUM, INGETEKEND FROM tentamenintekenlijst WHERE STUDENID = ?";
             stmt = connection.prepareStatement(sql);
-            stmt.setInt(1, tentamenintekenlijst.getSTUDENTID());
+            stmt.setInt(1,tentamenintekenlijst.getINTEKEN_ID() );
+            stmt.setInt(2, tentamenintekenlijst.getSTUDENTID());
+            stmt.setString(3,tentamenintekenlijst.getSTUDENTNAAM() );
+            stmt.setString(4,tentamenintekenlijst.getSTUDENTVOORNAAM() );
+            stmt.setInt(5, tentamenintekenlijst.getTENTAMENID() );
+            stmt.setString(6, tentamenintekenlijst.getTENTAMENNAAM() );
+            stmt.setString(7, tentamenintekenlijst.getINTEKEN_DATUM() );
+            stmt.setString(8,tentamenintekenlijst.getUITTEKEN_DATUM() );
+            stmt.setString(9,tentamenintekenlijst.getINGETEKEND() );
             result = stmt.executeUpdate();
-            System.out.println("deleted: " + tentamenintekenlijst.getSTUDENTID());
+
+
+            System.out.println("deleted: " + tentamenintekenlijst.getINTEKEN_ID() + " " + tentamenintekenlijst.getSTUDENTNAAM()+ " " + tentamenintekenlijst.getSTUDENTVOORNAAM());
 
         } catch (SQLException e) {
 

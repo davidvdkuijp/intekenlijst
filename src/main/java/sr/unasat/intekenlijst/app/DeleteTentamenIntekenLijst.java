@@ -17,13 +17,13 @@ public class DeleteTentamenIntekenLijst {
             System.out.println(TentaIntekenLijst);
         }
 
-        Tentamenintekenlijst TentaIntekenLijst1 = new Tentamenintekenlijst(1);
-        System.out.println(TentaIntekenRepo.deleteOneRecord(TentaIntekenLijst1));
+        Tentamenintekenlijst deleterow = new Tentamenintekenlijst(1);
+        System.out.println(TentaIntekenRepo.deleteRecord(deleterow));
 
 
              TentaIntekenList = TentaIntekenRepo.findAllRecords();
         for (Tentamenintekenlijst TentaIntekenLijst : TentaIntekenList) {
-            System.out.println(TentaIntekenLijst);
+            System.out.println(TentaIntekenLijst.getINTEKEN_ID() + " " + TentaIntekenLijst.getSTUDENTVOORNAAM());
         }
     }
 }
