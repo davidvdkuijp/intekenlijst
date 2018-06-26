@@ -32,6 +32,13 @@ private String INGETEKEND;
         this.TENTAMENID = TENTAMENID;
     }
 
+
+    public Tentamenintekenlijst(int STUDENTID, int TENTAMENID, int INTEKEN_ID) {
+        this.STUDENTID = STUDENTID;
+        this.TENTAMENID = TENTAMENID;
+        this.INTEKEN_ID = INTEKEN_ID;
+    }
+
     public Tentamenintekenlijst(int STUDENTID) {
         this.STUDENTID = STUDENTID;
     }

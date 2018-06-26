@@ -111,10 +111,11 @@ public class TentamenIntekenLijstRepository {
         PreparedStatement stmt = null;
         int result = 0;
         try {
-            String sql = "update tentamenintekenlijst ti  set ti.STUDENTID = ?, ti.TENTAMENID = ? where ci.id = ?";
+            String sql = "update tentamenintekenlijst ti  set ti.STUDENTID = ?, ti.TENTAMENID = ? where ti.INTEKEN_ID = ?";
             stmt = connection.prepareStatement(sql);
             stmt.setInt(1, tilRep.getSTUDENTID());
             stmt.setInt(2, tilRep.getTENTAMENID());
+            stmt.setInt(3,tilRep.getINTEKEN_ID() );
             result = stmt.executeUpdate();
             System.out.println("resultset: " + result);
 

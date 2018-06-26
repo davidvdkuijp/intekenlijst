@@ -1,4 +1,3 @@
-/*
 package sr.unasat.intekenlijst.app;
 
 import sr.unasat.intekenlijst.entities.Tentamenintekenlijst;
@@ -9,13 +8,12 @@ public class UpdateTentamenIntekenLijst {
     public static void main(String[] args) {
 
         TentamenIntekenLijstRepository tilRep = new TentamenIntekenLijstRepository();
-        Tentamenintekenlijst recordFound = tilRep.updateRecord();
-        System.out.println("Record: " + tilRep);
+        Tentamenintekenlijst firstRow = new Tentamenintekenlijst(5,60 , 70);
 
-        recordFound.setSTUDENTNAAM("Josh");
-        tilRep.updateRecord(recordFound);
+        tilRep.updateRecord(firstRow);
+
+        System.out.println("Record: " + tilRep);
 
 
     }
 }
-*/
