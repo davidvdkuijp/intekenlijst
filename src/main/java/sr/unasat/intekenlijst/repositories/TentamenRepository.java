@@ -63,7 +63,7 @@ public class TentamenRepository {
         return tentamenList;
     }
 
-    public int insertOneRecord(Tentamen tentamen) {
+    public int insertRecord(Tentamen tentamen) {
         PreparedStatement stmt = null;
         int result = 0;
         try {
@@ -87,23 +87,5 @@ public class TentamenRepository {
         return result;
     }
 
-    public int deleteOneRecord(Tentamen tentamen){
-        PreparedStatement stmt = null;
-        int result = 0;
-        try {
-            String sql = "DELETE FROM tentamen WHERE temtamen.TENTAMEN_ID = ?";
-            stmt = connection.prepareStatement(sql);
-            stmt.setInt(1, tentamen.getTENTAMENT_ID());
-            result = stmt.executeUpdate();
-            System.out.println("deleted: " + tentamen.getTENTAMENT_ID());
-
-        } catch (SQLException e) {
-
-        } finally {
-
-        }
-        return result;
     }
-
-}
 

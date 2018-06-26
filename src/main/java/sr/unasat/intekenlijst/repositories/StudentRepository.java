@@ -4,7 +4,6 @@ import sr.unasat.intekenlijst.entities.Student;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class StudentRepository {
@@ -53,8 +52,8 @@ public class StudentRepository {
                //Display values
                System.out.print("ID: " + STUDENT_ID);
                System.out.print(", Age: " + NAAM + VOORNAAM);
-                studentList.add(new Student(STUDENT_ID, NAAM,VOORNAAM,EMAIL,STUDENTENNUMMER,ADRES,CONTACTNUMMER,GESLACHT,GEBOORTEDATUM));
-                //studentList.add(new Student(rs.getInt("id"), rs.getString("naam")));
+               studentList.add(new Student(STUDENT_ID, NAAM,VOORNAAM,EMAIL,STUDENTENNUMMER,ADRES,CONTACTNUMMER,GESLACHT,GEBOORTEDATUM));
+
             }
             rs.close();
 
@@ -67,47 +66,7 @@ public class StudentRepository {
         return studentList;
     }
 
-    public int insertOneRecord(Student student) {
-        PreparedStatement stmt = null;
-        int result = 0;
-        try {
-            String sql = "insert into student (NAAM) values(?)";
-            stmt = connection.prepareStatement(sql);
-            stmt.setString(1, student.getNAAM());
-            result = stmt.executeUpdate();
-            System.out.println("resultset: " + result);
-
-        } catch (SQLException e) {
-
-        } finally {
-
-        }
-        return result;
-    }
-
-    public int deleteOneRecord(Student student){
-        PreparedStatement stmt = null;
-        int result = 0;
-
-        try {
-            stmt = connection.prepareStatement ("DELETE FROM student WHERE STUDENT_ID = ?");
-           // String sql = "DELETE FROM student WHERE student.STUDENT_ID = ?";
-            //stmt = connection.prepareStatement(sql);
-            stmt.setInt(1, student.getSTUDENT_ID());
-            result = stmt.executeUpdate();
-
-
-        } catch (SQLException e) {
-            System.out.println("deleted Student ID: " + student.getSTUDENT_ID());
-           // e.printStackTrace();
-
-        } finally {
-
-        }
-        return result;
-    }
-
-}
+  }
 
 
 

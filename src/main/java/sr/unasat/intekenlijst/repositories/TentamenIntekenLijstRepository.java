@@ -1,7 +1,6 @@
 package sr.unasat.intekenlijst.repositories;
 
 
-import com.sun.org.apache.bcel.internal.generic.RETURN;
 import sr.unasat.intekenlijst.entities.Tentamenintekenlijst;
 
 import java.sql.*;
@@ -54,11 +53,8 @@ public class TentamenIntekenLijstRepository {
                 String INGETEKEND = rs.getString("INGETEKEND");
            
                 
-                 /*    //Display values
-               System.out.print("ID: " + id);
-               System.out.print(", Age: " + naam);*/
                 tentamenintekenlijstList.add(new Tentamenintekenlijst(INTEKEN_ID, STUDENTID,STUDENTNAAM,STUDENTVOORNAAM,TENTAMENID,TENTAMENNAAM,INTEKEN_DATUM,UITEKEN_DATUM,INGETEKEND));
-                //  persoonList.add(new Persoon(rs.getInt("id"), rs.getString("naam")));
+
             }
             rs.close();
 
@@ -71,23 +67,6 @@ public class TentamenIntekenLijstRepository {
         return tentamenintekenlijstList;
     }
 
-    public int insertOneRecord(Tentamenintekenlijst tentamenintekenlijst) {
-        PreparedStatement stmt = null;
-        int result = 0;
-        try {
-            String sql = "insert into tentamentintekenlijst (INGETEKEND) values(?)";
-            stmt = connection.prepareStatement(sql);
-            stmt.setString(1, tentamenintekenlijst.getINGETEKEND());
-            result = stmt.executeUpdate();
-            System.out.println("resultset: " + result);
-
-        } catch (SQLException e) {
-
-        } finally {
-
-        }
-        return result;
-    }
 
     public int deleteRecord(Tentamenintekenlijst tentamenintekenlijst){
         PreparedStatement stmt = null;
@@ -96,14 +75,6 @@ public class TentamenIntekenLijstRepository {
             String sql = "DELETE FROM tentamenintekenlijst WHERE INTEKEN_ID = ?";
             stmt = connection.prepareStatement(sql);
             stmt.setInt(1,tentamenintekenlijst.getINTEKEN_ID() );
-            /*stmt.setInt(2, tentamenintekenlijst.getSTUDENTID());
-            stmt.setString(3,tentamenintekenlijst.getSTUDENTNAAM() );
-            stmt.setString(4,tentamenintekenlijst.getSTUDENTVOORNAAM() );
-            stmt.setInt(5, tentamenintekenlijst.getTENTAMENID() );
-            stmt.setString(6, tentamenintekenlijst.getTENTAMENNAAM() );
-            stmt.setString(7, tentamenintekenlijst.getINTEKEN_DATUM() );
-            stmt.setString(8,tentamenintekenlijst.getUITTEKEN_DATUM() );
-            stmt.setString(9,tentamenintekenlijst.getINGETEKEND() );*/
             stmt.executeUpdate();
 
 
