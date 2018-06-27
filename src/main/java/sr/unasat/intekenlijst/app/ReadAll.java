@@ -24,11 +24,11 @@ public class ReadAll {
             System.out.println(tentamen);
         }
 
-        TentamenIntekenLijstRepository TILRepo = new TentamenIntekenLijstRepository();
+        /*TentamenIntekenLijstRepository TILRepo = new TentamenIntekenLijstRepository();
         List<Tentamenintekenlijst> TILList = TILRepo.findAllRecords();
         for (Tentamenintekenlijst tentamenintekenlijst : TILList) {
             System.out.println(tentamenintekenlijst);
-        }
+        }*/
 
     }
 
