@@ -10,7 +10,7 @@ public class InsertTentamen {
     public static void main(String[] args) {
 
         TentamenRepository tentamenRepo = new TentamenRepository();
-        Tentamen t = new Tentamen(48, "NW", "Netwerken", "2019-01-23", "08:00", "2 uren", "Regulier tentamen");
+        Tentamen t = new Tentamen(49, "NW", "Netwerken", "2019-01-23", "08:00", "2 uren", "Regulier tentamen");
         tentamenRepo.insertRecord(t);
 
     }

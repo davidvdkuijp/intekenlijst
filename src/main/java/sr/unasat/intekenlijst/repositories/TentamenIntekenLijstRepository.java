@@ -77,7 +77,6 @@ public class TentamenIntekenLijstRepository {
             stmt.setInt(1,tentamenintekenlijst.getINTEKEN_ID() );
             stmt.executeUpdate();
 
-
             System.out.println("deleted: " + tentamenintekenlijst.getINTEKEN_ID() + " " + tentamenintekenlijst.getSTUDENTNAAM()+ " " + tentamenintekenlijst.getSTUDENTVOORNAAM());
 
         } catch (SQLException e) {
@@ -115,7 +114,7 @@ public List<Tentamenintekenlijst> SelectTentaInteken () {
     int result = 0;
 
     try {
-        String sql = "Select * FROM TENTAMENINTEKENLIJST";
+        String sql = "select * from tentamenintekenlijst right join student on tentamenintekenlijst.STUDENTID = student.STUDENT_ID right join tentamen on tentamenintekenlijst.TENTAMENID = tentamen.TENTAMEN_ID";
         stmt = connection.prepareStatement(sql);
         ResultSet rs = stmt.executeQuery(sql);
         System.out.println("resultset: " + rs);

@@ -17,7 +17,7 @@ public class DeleteTentamenIntekenLijst {
             System.out.println(TentaIntekenLijst);
         }
 
-        Tentamenintekenlijst deleterow = new Tentamenintekenlijst(92);
+        Tentamenintekenlijst deleterow = new Tentamenintekenlijst(75);
         System.out.println(TentaIntekenRepo.deleteRecord(deleterow));
 
 
