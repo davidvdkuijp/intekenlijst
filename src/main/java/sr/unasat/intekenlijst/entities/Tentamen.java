@@ -22,60 +22,28 @@ public class Tentamen {
         this.TENTAMENTYPE = TENTAMENTYPE;
     }
 
-    public int getTENTAMENT_ID() {
-        return TENTAMENT_ID;
-    }
-
-    public void setTENTAMENT_ID(int TENTAMENT_ID) {
-        this.TENTAMENT_ID = TENTAMENT_ID;
-    }
-
     public String getVAK() {
         return VAK;
-    }
-
-    public void setVAK(String VAK) {
-        this.VAK = VAK;
     }
 
     public String getOMSCHRIJVING() {
         return OMSCHRIJVING;
     }
 
-    public void setOMSCHRIJVING(String OMSCHRIJVING) {
-        this.OMSCHRIJVING = OMSCHRIJVING;
-    }
-
     public String getTENTAMENDATUM() {
         return TENTAMENDATUM;
-    }
-
-    public void setTENTAMENDATUM(String TENTAMENDATUM) {
-        this.TENTAMENDATUM = TENTAMENDATUM;
     }
 
     public String getTENTAMENSTARTTIJD() {
         return TENTAMENSTARTTIJD;
     }
 
-    public void setTENTAMENSTARTTIJD(String TENTAMENSTARTTIJD) {
-        this.TENTAMENSTARTTIJD = TENTAMENSTARTTIJD;
-    }
-
     public String getTENTAMENDUUR() {
         return TENTAMENDUUR;
     }
 
-    public void setTENTAMENDUUR(String TENTAMENDUUR) {
-        this.TENTAMENDUUR = TENTAMENDUUR;
-    }
-
     public String getTENTAMENTYPE() {
         return TENTAMENTYPE;
-    }
-
-    public void setTENTAMENTYPE(String TENTAMENTYPE) {
-        this.TENTAMENTYPE = TENTAMENTYPE;
     }
 
     @Override

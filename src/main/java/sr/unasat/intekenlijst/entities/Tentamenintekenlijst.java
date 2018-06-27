@@ -26,11 +26,6 @@ private String INGETEKEND;
         this.INGETEKEND = INGETEKEND;
     }
 
-    public Tentamenintekenlijst(int STUDENTID, int TENTAMENID) {
-        this.STUDENTID = STUDENTID;
-        this.TENTAMENID = TENTAMENID;
-    }
-
 
     public Tentamenintekenlijst(int STUDENTID, int TENTAMENID, int INTEKEN_ID) {
         this.STUDENTID = STUDENTID;
@@ -48,72 +43,36 @@ private String INGETEKEND;
         return INTEKEN_ID;
     }
 
-    public void setINTEKEN_ID(int INTEKEN_ID) {
-        this.INTEKEN_ID = INTEKEN_ID;
-    }
-
     public int getSTUDENTID() {
         return STUDENTID;
-    }
-
-    public void setSTUDENTID(int STUDENTID) {
-        this.STUDENTID = STUDENTID;
     }
 
     public String getSTUDENTNAAM() {
         return STUDENTNAAM;
     }
 
-    public void setSTUDENTNAAM(String STUDENTNAAM) {
-        this.STUDENTNAAM = STUDENTNAAM;
-    }
-
     public String getSTUDENTVOORNAAM() {
         return STUDENTVOORNAAM;
-    }
-
-    public void setSTUDENTVOORNAAM(String STUDENTVOORNAAM) {
-        this.STUDENTVOORNAAM = STUDENTVOORNAAM;
     }
 
     public int getTENTAMENID() {
         return TENTAMENID;
     }
 
-    public void setTENTAMENID(int TENTAMENID) {
-        this.TENTAMENID = TENTAMENID;
-    }
-
     public String getTENTAMENNAAM() {
         return TENTAMENNAAM;
-    }
-
-    public void setTENTAMENNAAM(String TENTAMENNAAM) {
-        this.TENTAMENNAAM = TENTAMENNAAM;
     }
 
     public String getINTEKEN_DATUM() {
         return INTEKEN_DATUM;
     }
 
-    public void setINTEKEN_DATUM(String INTEKEN_DATUM) {
-        this.INTEKEN_DATUM = INTEKEN_DATUM;
-    }
-
     public String getUITTEKEN_DATUM() {
         return UITTEKEN_DATUM;
     }
 
-    public void setUITTEKEN_DATUM(String UITTEKEN_DATUM) {
-        this.UITTEKEN_DATUM = UITTEKEN_DATUM;
-    }
-
     public String getINGETEKEND() {
         return INGETEKEND;
-    }
-
-    public void setINGETEKEND(String INGETEKEND) {
-        this.INGETEKEND = INGETEKEND;
     }
 
     @Override

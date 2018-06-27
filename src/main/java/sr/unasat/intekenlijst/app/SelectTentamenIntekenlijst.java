@@ -10,7 +10,8 @@ public class SelectTentamenIntekenlijst {
         TentamenIntekenLijstRepository TilRepo = new TentamenIntekenLijstRepository();
         List<Tentamenintekenlijst> TILList = TilRepo.SelectTentaInteken();
         for (Tentamenintekenlijst tentamenintekenlijst : TILList) {
-            System.out.println(tentamenintekenlijst.getSTUDENTVOORNAAM() + " " + tentamenintekenlijst.getSTUDENTNAAM());
+            System.out.println(tentamenintekenlijst.getSTUDENTVOORNAAM() + " " + tentamenintekenlijst.getSTUDENTNAAM() + " " + tentamenintekenlijst.getTENTAMENNAAM()
+                    + " Ingetekend=  " + "" + tentamenintekenlijst.getINGETEKEND());
         }
 
 
