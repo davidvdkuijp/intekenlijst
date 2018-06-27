@@ -17,13 +17,9 @@ public class DeleteTentamenIntekenLijst {
             System.out.println(TentaIntekenLijst);
         }
 
-        Tentamenintekenlijst deleterow = new Tentamenintekenlijst(75);
+        Tentamenintekenlijst deleterow = new Tentamenintekenlijst(80);
         System.out.println(TentaIntekenRepo.deleteRecord(deleterow));
 
 
-             TentaIntekenList = TentaIntekenRepo.findAllRecords();
-        for (Tentamenintekenlijst TentaIntekenLijst : TentaIntekenList) {
-            System.out.println(TentaIntekenLijst.getINTEKEN_ID() + " " + TentaIntekenLijst.getSTUDENTVOORNAAM());
-        }
     }
 }
