@@ -149,5 +149,35 @@ return  tentamenintekenlijstList;
 
 }
 
+    public int insertRecordTentaIntekenLijst (Tentamenintekenlijst tentamenintekenlijst) {
+        PreparedStatement stmt = null;
+        int result = 0;
+        try {
+            String sql = "insert into tentamenintekenlijst (STUDENTID, STUDENTNAAM, STUDENTVOORNAAM, TENTAMENID, TENTAMENNAAM, INTEKEN_DATUM, UITTEKEN_DATUM, INGETEKEND) values(?,?,?,?,?,?,?,?)";
+            stmt = connection.prepareStatement(sql);
+            stmt.setInt(1, tentamenintekenlijst.getSTUDENTID());
+            stmt.setString(2, tentamenintekenlijst.getSTUDENTNAAM() );
+            stmt.setString(3, tentamenintekenlijst.getSTUDENTVOORNAAM() );
+            stmt.setInt(4, tentamenintekenlijst.getTENTAMENID());
+            stmt.setString(5, tentamenintekenlijst.getTENTAMENNAAM() );
+            stmt.setString(6, tentamenintekenlijst.getINTEKEN_DATUM() );
+            stmt.setString(7, tentamenintekenlijst.getUITTEKEN_DATUM() );
+            stmt.setString(8, tentamenintekenlijst.getINGETEKEND() );
+            result = stmt.executeUpdate();
+            System.out.println("resultset: " + result);
+
+
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        } finally {
+
+        }
+        return result;
+
+
+
+    }
 
 }

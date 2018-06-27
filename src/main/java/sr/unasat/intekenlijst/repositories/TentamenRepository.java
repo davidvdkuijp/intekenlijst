@@ -4,7 +4,6 @@ import sr.unasat.intekenlijst.entities.Tentamen;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class TentamenRepository {
@@ -63,7 +62,7 @@ public class TentamenRepository {
         return tentamenList;
     }
 
-    public int insertRecord(Tentamen tentamen) {
+    public int insertRecordTenta (Tentamen tentamen) {
         PreparedStatement stmt = null;
         int result = 0;
         try {
@@ -86,6 +85,7 @@ public class TentamenRepository {
         }
         return result;
     }
+
 
     }
 

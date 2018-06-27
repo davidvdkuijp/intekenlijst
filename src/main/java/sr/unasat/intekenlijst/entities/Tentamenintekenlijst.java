@@ -1,6 +1,5 @@
 package sr.unasat.intekenlijst.entities;
 
-import org.omg.CORBA.PRIVATE_MEMBER;
 
 
 

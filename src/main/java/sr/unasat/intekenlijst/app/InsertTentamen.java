@@ -11,7 +11,7 @@ public class InsertTentamen {
 
         TentamenRepository tentamenRepo = new TentamenRepository();
         Tentamen t = new Tentamen(49, "NW", "Netwerken", "2019-01-23", "08:00", "2 uren", "Regulier tentamen");
-        tentamenRepo.insertRecord(t);
+        tentamenRepo.insertRecordTenta(t);
 
     }
 }
