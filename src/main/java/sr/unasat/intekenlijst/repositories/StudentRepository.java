@@ -31,8 +31,8 @@ public class StudentRepository          //http://archive.oreilly.com/oreillyscho
     }
 
     public List<Student> findAllRecords() {
-        List<Student> studentList = new ArrayList<Student>();
-        Statement stmt = null;
+        List<Student> studentList = new ArrayList<Student>();           // Arraylist is een (constructor) list met geen vaste size (het is scalable) hier maak je een object aan
+        Statement stmt = null;                                          // implementing simple SQL statements with no parameters;
         try {
             stmt = connection.createStatement();
             String sql = "select * from Student";
@@ -54,7 +54,7 @@ public class StudentRepository          //http://archive.oreilly.com/oreillyscho
                //Display values
                /*System.out.print("ID: " + STUDENT_ID);
                System.out.print(", Student: " + NAAM +" "+ VOORNAAM);*/
-               studentList.add(new Student(STUDENT_ID, NAAM,VOORNAAM,EMAIL,STUDENTENNUMMER,ADRES,CONTACTNUMMER,GESLACHT,GEBOORTEDATUM));
+              studentList.add(new Student(STUDENT_ID, NAAM,VOORNAAM,EMAIL,STUDENTENNUMMER,ADRES,CONTACTNUMMER,GESLACHT,GEBOORTEDATUM));
 
             }
             rs.close();

@@ -63,11 +63,11 @@ public class TentamenRepository {
     }
 
     public int insertRecordTenta (Tentamen tentamen) {
-        PreparedStatement stmt = null;
+        PreparedStatement stmt = null;                                            // Ddefine preparedstatement
         int result = 0;
         try {
             String sql = "insert into tentamen (VAK, OMSCHRIJVING, TENTAMENDATUM, TENTAMENSTARTTIJD, TENTAMENDUUR, TENTAMENTYPE) values(?,?,?,?,?,?)";
-            stmt = connection.prepareStatement(sql);
+            stmt = connection.prepareStatement(sql);                            //perpared statements =Used for precompiling SQL statements that might contain input parameters
             stmt.setString(1, tentamen.getVAK());
             stmt.setString(2, tentamen.getOMSCHRIJVING());
             stmt.setString(3, tentamen.getTENTAMENDATUM() );

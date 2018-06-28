@@ -11,5 +11,7 @@ public class InsertTentamenIntekenLijst {
         Tentamenintekenlijst t = new Tentamenintekenlijst(100, 6, "Narain", "Maarten", 55, "Java", "2019-02-20", "2019-02-20", "JA");
         tentamenIntekLijstRepo.insertRecordTentaIntekenLijst(t);
 
+        System.out.println(t);
+
     }
 }

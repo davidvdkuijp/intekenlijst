@@ -11,11 +11,11 @@ import java.util.List;
 
 public class ReadTentamen_And_Student {
 
-    public static void main(String[] args) {
-        StudentRepository StudentRepo = new StudentRepository();
-        List<Student> StudentList = StudentRepo.findAllRecords();
-        for (Student student : StudentList) {
-            System.out.println(student);
+    public static void main(String[] args) {                            // main method
+        StudentRepository StudentRepo = new StudentRepository();        // object aanmaken door constructor
+        List<Student> StudentList = StudentRepo.findAllRecords();       //method oproepen
+        for (Student student : StudentList) {                           //for loop
+            System.out.println(student);                                // print
         }
 
         TentamenRepository TentamenRepo = new TentamenRepository();

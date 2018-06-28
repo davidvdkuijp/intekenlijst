@@ -12,7 +12,7 @@ public class UpdateTentamenIntekenLijst {
 
         tilRep.updateRecord(firstRow);
 
-        System.out.println("Record: " + tilRep);
+        System.out.println("Record: " + tilRep); // moet ("Record: " + firstRow) zijn
 
 
     }
