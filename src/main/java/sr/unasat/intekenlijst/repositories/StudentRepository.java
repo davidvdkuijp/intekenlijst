@@ -16,10 +16,10 @@ public class StudentRepository          //http://archive.oreilly.com/oreillyscho
             Class.forName("com.mysql.jdbc.Driver");     // get the driver for this database.
             System.out.println("Het systeem werkt");
 
-            String URL = "jdbc:mysql://localhost/tentamen_intekenlijst";
+            String URL = "jdbc:mysql://localhost/tentamen_intekenlijst";    // our database location
             String USER = "root";                       // our database--username
-            String PASS = "admin";
-            connection = DriverManager.getConnection(URL, USER, PASS);
+            String PASS = "admin";                      // our database password
+            connection = DriverManager.getConnection(URL, USER, PASS);  // Establish the database connection, create a statement for execution of SQL commands.
             System.out.println(connection);
         } catch (ClassNotFoundException ex) {           // als de connection niet lukt
             System.out.println("Class can not load");
@@ -32,7 +32,7 @@ public class StudentRepository          //http://archive.oreilly.com/oreillyscho
 
     public List<Student> findAllRecords() {
         List<Student> studentList = new ArrayList<Student>();           // Arraylist is een (constructor) list met geen vaste size (het is scalable) hier maak je een object aan
-        Statement stmt = null;                                          // implementing simple SQL statements with no parameters;
+        Statement stmt = null;                                    // implementing simple SQL statements with no parameters;
         try {
             stmt = connection.createStatement();
             String sql = "select * from Student";
@@ -62,7 +62,9 @@ public class StudentRepository          //http://archive.oreilly.com/oreillyscho
 
         } catch (SQLException e) {
 
-        } finally {
+        }
+
+        finally {
 
         }
         return studentList;
