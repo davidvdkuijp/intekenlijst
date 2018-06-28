@@ -8,7 +8,7 @@ public class UpdateTentamenIntekenLijst {
     public static void main(String[] args) {
 
         TentamenIntekenLijstRepository tilRep = new TentamenIntekenLijstRepository();
-        Tentamenintekenlijst firstRow = new Tentamenintekenlijst(5,60 , 71);
+        Tentamenintekenlijst firstRow = new Tentamenintekenlijst(5,60 , 70 );
 
         tilRep.updateRecord(firstRow);
 

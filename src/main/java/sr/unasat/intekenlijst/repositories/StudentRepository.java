@@ -6,7 +6,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentRepository {
+public class StudentRepository          //http://archive.oreilly.com/oreillyschool/courses/java4/java411.html
+
+{
     private Connection connection;
 
     public StudentRepository() {
@@ -50,8 +52,8 @@ public class StudentRepository {
                 String GEBOORTEDATUM = rs.getString("GEBOORTEDATUM");
 
                //Display values
-               System.out.print("ID: " + STUDENT_ID);
-               System.out.print(", Age: " + NAAM + VOORNAAM);
+               /*System.out.print("ID: " + STUDENT_ID);
+               System.out.print(", Student: " + NAAM +" "+ VOORNAAM);*/
                studentList.add(new Student(STUDENT_ID, NAAM,VOORNAAM,EMAIL,STUDENTENNUMMER,ADRES,CONTACTNUMMER,GESLACHT,GEBOORTEDATUM));
 
             }

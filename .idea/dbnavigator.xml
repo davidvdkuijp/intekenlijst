@@ -25,7 +25,6 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="12205253-05cf-4c73-966b-db9adc54492e">
-        <schema name="david" object-types="function, table, view" />
         <schema name="tentamen_intekenlijst" object-types="function, table, view" />
       </connection>
     </loaded-nodes>
@@ -43,8 +42,8 @@
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
     <mapping file-url="file://$PROJECT_DIR$/src/main/resources/beroepsproduct.sql" connection-id="12205253-05cf-4c73-966b-db9adc54492e" session-id="MAIN" current-schema="tentamen_intekenlijst" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/beroepsproduct.sql" connection-id="12205253-05cf-4c73-966b-db9adc54492e" session-id="MAIN" current-schema="tentamen_intekenlijst" />
     <mapping file-url="file://$PROJECT_DIR$/src/main/resources/beroepsproduct.sql" connection-id="445db658-71c6-47ad-b637-4bd0a94c93f0" session-id="MAIN" current-schema="david" />
-    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/beroepsproduct.sql" connection-id="2b62bfce-870a-473c-b0ae-edc2831bf85b" session-id="MAIN" current-schema="tentamen_intekenlijst" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />
@@ -81,7 +80,7 @@
           <url-type value="DATABASE" />
           <host value="localhost" />
           <port value="3306" />
-          <database value="mysql" />
+          <database value="tentamen_intekenlijst" />
           <os-authentication value="false" />
           <empty-password value="false" />
           <user value="root" />

@@ -1,7 +1,7 @@
 package sr.unasat.intekenlijst.entities;
 
-import java.sql.Time;
-import java.util.Date;
+import java.sql.Time;                   // wordt niet gebruikt moet weg
+import java.util.Date;                  // wordt niet gebruikt moet weg
 
 public class Tentamen {
     private int TENTAMENT_ID;
