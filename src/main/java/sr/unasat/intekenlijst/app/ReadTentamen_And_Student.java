@@ -9,7 +9,7 @@ import sr.unasat.intekenlijst.repositories.TentamenRepository;
 
 import java.util.List;
 
-public class ReadAll {
+public class ReadTentamen_And_Student {
 
     public static void main(String[] args) {
         StudentRepository StudentRepo = new StudentRepository();
@@ -23,12 +23,6 @@ public class ReadAll {
         for (Tentamen tentamen : tentamenList) {
             System.out.println(tentamen);
         }
-
-        /*TentamenIntekenLijstRepository TILRepo = new TentamenIntekenLijstRepository();
-        List<Tentamenintekenlijst> TILList = TILRepo.findAllRecords();
-        for (Tentamenintekenlijst tentamenintekenlijst : TILList) {
-            System.out.println(tentamenintekenlijst);
-        }*/
 
     }
 
