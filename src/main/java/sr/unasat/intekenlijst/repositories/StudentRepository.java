@@ -9,22 +9,22 @@ import java.util.List;
 public class StudentRepository          //http://archive.oreilly.com/oreillyschool/courses/java4/java411.html
 
 {
-    private Connection connection;
+    private Connection connection;      // The database connection object.
 
-    public StudentRepository() {
+    public StudentRepository() {        // the constructor for the database manager.
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");     // get the driver for this database.
             System.out.println("Het systeem werkt");
 
             String URL = "jdbc:mysql://localhost/tentamen_intekenlijst";
-            String USER = "root";
+            String USER = "root";                       // our database--username
             String PASS = "admin";
             connection = DriverManager.getConnection(URL, USER, PASS);
             System.out.println(connection);
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException ex) {           // als de connection niet lukt
             System.out.println("Class can not load");
             System.exit(1);
-        } catch (SQLException e) {
+        } catch (SQLException e) {                      // Als er een fout is die niet SQL gereleateerd is. gaat het dat pakken en printen
             e.printStackTrace();
         }
 
