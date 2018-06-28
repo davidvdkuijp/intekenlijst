@@ -14,7 +14,7 @@ public class InsertTentamen {                                   // Create handel
         tentamenRepo.insertRecordTenta(t);
 
 
-        System.out.println(t);          // is er niet in code van meneer
+        System.out.println(t);          // is er niet in code van meneer en is om te zien  welke records je hebt geinsert
     }
 }
 

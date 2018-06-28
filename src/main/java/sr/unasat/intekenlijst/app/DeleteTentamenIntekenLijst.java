@@ -13,12 +13,13 @@ public class DeleteTentamenIntekenLijst {
 
         TentamenIntekenLijstRepository TentaIntekenRepo = new TentamenIntekenLijstRepository();
         List<Tentamenintekenlijst> TentaIntekenList = TentaIntekenRepo.findAllRecords();
+        //for loop is ook niet nodig hier
         for (Tentamenintekenlijst TentaIntekenLijst : TentaIntekenList) {
             System.out.println(TentaIntekenLijst);
         }
 
-        Tentamenintekenlijst deleterow = new Tentamenintekenlijst(80);
-        System.out.println(TentaIntekenRepo.deleteRecord(deleterow));
+        Tentamenintekenlijst deleterow = new Tentamenintekenlijst(518);
+        System.out.println(TentaIntekenRepo.deleteRecord(deleterow));                   //
 
 
     }
